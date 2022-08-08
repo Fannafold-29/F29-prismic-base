@@ -1,11 +1,19 @@
+import React from "react";
 import clsx from "clsx";
 
-export const Heading = ({
+interface IProps {
+  as?: React.ElementType;
+  size?: string;
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export function Heading({
   as: Comp = "h1",
   size = "8xl",
   children,
   className,
-}) => {
+}: IProps) {
   return (
     <Comp
       className={clsx(
@@ -19,4 +27,4 @@ export const Heading = ({
       {children}
     </Comp>
   );
-};
+}

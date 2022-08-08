@@ -1,10 +1,11 @@
+import React from "react";
 import { PrismicLink, PrismicRichText, PrismicText } from "@prismicio/react";
 import * as prismicH from "@prismicio/helpers";
 
 import { Bounded } from "./Bounded";
 import { Heading } from "./Heading";
 
-const SignUpForm = ({ settings }) => {
+export function SignUpForm({ settings }) {
   return (
     <div className="px-4">
       <form
@@ -62,7 +63,7 @@ const SignUpForm = ({ settings }) => {
       </form>
     </div>
   );
-};
+}
 
 export const Footer = ({ settings }) => {
   return (

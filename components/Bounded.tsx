@@ -1,12 +1,20 @@
+import React from "react";
 import clsx from "clsx";
 
-export const Bounded = ({
+interface IProps {
+  as?: React.ElementType;
+  yPadding?: string;
+  collapsible?: boolean;
+  className?: string;
+  children?: React.ReactNode;
+}
+export function Bounded({
   as: Comp = "div",
   yPadding = "base",
   collapsible = true,
   className,
   children,
-}) => {
+}: IProps) {
   return (
     <Comp
       data-collapsible={collapsible}
@@ -20,4 +28,4 @@ export const Bounded = ({
       <div className="mx-auto w-full max-w-6xl">{children}</div>
     </Comp>
   );
-};
+}

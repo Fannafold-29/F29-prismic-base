@@ -1,6 +1,7 @@
-const prismic = require("@prismicio/client");
+import * as sm from './sm.json'
+import prismic from '@prismicio/client'
 
-const sm = require("./sm.json");
+
 
 /** @type {import('next').NextConfig} */
 const nextConfig = async () => {
@@ -22,4 +23,4 @@ const nextConfig = async () => {
   };
 };
 
-module.exports = nextConfig;
+export default nextConfig;

@@ -1,12 +1,8 @@
+import React from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 
-export const Layout = ({
-  alternateLanguages,
-  navigation,
-  settings,
-  children,
-}) => {
+export function Layout({ alternateLanguages, navigation, settings, children }) {
   return (
     <div className="text-slate-800">
       <Header
@@ -18,4 +14,4 @@ export const Layout = ({
       <Footer settings={settings} />
     </div>
   );
-};
+}
